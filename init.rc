@@ -1069,3 +1069,10 @@ on property:init.svc.media=restarting
 
 on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/scheduler cfq
+
+# init Adam Kernel
+service adaminit /sbin/adam.sh
+    class core
+    user root
+    oneshot
+
